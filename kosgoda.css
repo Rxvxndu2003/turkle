@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --black: black;
+    --white: #ffffff;
+}
+.header{
+    min-height: 75vh;
+    width: 100%;
+    background-image: url(./Images/kosgoda\ new.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.8;
+}
+nav img{
+    width: 100px;
+    margin-top: 30px;
+}
+nav{
+    display: flex;
+    padding: 0 6%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:var(--black);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.btn-1{
+    display: inline-block;
+    color:var(--black);
+    padding: 8px 30px;
+    background:  rgba(255,255,255,0.7);  
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.background{
+    background: radial-gradient(#fff,#ccf5ff);
+}
+@media(max-width: 700px){
+
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background:  #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color:var(--black);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+} 
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin: 30px;
+}
+.intro-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 5px 12px;
+    box-sizing: border-box;
+}
+.intro-img{
+    width: 100%;
+    border-radius: 10px;
+    height: 85%;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.kos h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.kosgoda{ 
+    justify-content: space-around;
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.ulist-1{
+    margin-left: 150px;
+    margin-right: 150px;
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 20px;
+}
+.k-para{
+    font-size: 16px;
+    font-weight: 500;
+}
+.map{
+    border-radius: 50px;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/*-----footer-----*/
+
+footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: var(--white);
+    padding: 25px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 10px;
+}
+.imgf{
+    width: 100px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.footer-col p{
+    color: var(--white);
+    padding-left: 0px;
+    padding-bottom: 20px;     
+}
+.row-footer{
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.footer-col{
+    flex-basis: 25%;
+    padding: 10px;
+    font-size: 14px;
+}
+.footer-col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    margin-top: 20px;
+}
+.email-id{
+    width: fit-content;
+}
+.footer-col ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.footer-col ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+.new{
+    margin-right: 10px;
+}
+.mobnav{
+    display: none;
+}
+.mobnav ul{
+    list-style:none;
+    text-align: center;
+    
+
+}
+.mobnav ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    
+}
+.mobnav ul li{
+    background-color: #555;
+    border-bottom: 1px solid black;
+    
+}
+.mobnav ul li:hover{
+    background-color: #0b0b0b;
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px){
+    .mobnav{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+    .row-footer{
+        display: block;
+    }
+}
+
